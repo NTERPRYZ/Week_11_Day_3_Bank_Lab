@@ -19,13 +19,19 @@ Bank.prototype.accountByName = function(name){
 Bank.prototype.largestAccount = function(){
   let largestAccount = this.accounts[0];
   this.accounts.forEach(function(accountObject){
-    // If the current account's value is bigger that result's value
-    // then update result to be the current account
     if(accountObject.value > largestAccount.value){
       largestAccount = accountObject;
     }
   })
   return largestAccount;
+}
+
+Bank.prototype.payInterest = function(){
+  let result = null;
+  this.accounts.forEach(function(accountObject){
+  result = accountObject.value *= 1.1
+  })
+  return result;
 }
 
 module.exports = Bank;
