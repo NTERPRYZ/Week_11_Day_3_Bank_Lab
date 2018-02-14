@@ -30,9 +30,9 @@ describe('Bank', function() {
     assert.deepEqual(bank.accountByName("Craig"), account4);
   });
 
-  // xit("should be able to find an account with highest value", function() {
-  //   assert.deepEqual(bank.largestAccount(), account3);
-  // });
+  it("should be able to find an account with highest value", function() {
+    assert.deepEqual(bank.largestAccount(), account3);
+  });
   //
   // xit("should be able to add 10% interest to all accounts", function() {
   //   var interestPaid1 = new Account("Sian", 66, 'personal');
